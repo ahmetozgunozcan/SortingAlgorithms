@@ -107,8 +107,6 @@ namespace SortingAlgorithms
             BubbleSortSonuc.Content = string.Join(",", dizi);
         }
 
-
-
         private void Insertion(object sender, RoutedEventArgs e)
         {
             InsertionSortSonuc.Content = "";
@@ -157,5 +155,28 @@ namespace SortingAlgorithms
 
             InsertionSortSonuc.Content = string.Join(",", dizi);
         }
+
+        private void Merge(object sender, RoutedEventArgs e)
+        {
+            MergeSortSonuc.Content = "";
+
+            //Stopwatch sw = new Stopwatch();
+            //sw.Start();
+
+            int[]? dizi = null;
+            if (!isValid(out dizi))
+                return;
+
+            if (dizi == null) return;
+
+            MergeSort mergeSort = new MergeSort(dizi);
+            var sonuc = mergeSort.Sort();
+
+            //sw.Stop();
+
+            MergeSortSonuc.Content = string.Join(",", sonuc);
+        }
+
+
     }
 }
