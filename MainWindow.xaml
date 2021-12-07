@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SortingAlgorithms"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Sıralama Algoritmaları" Height="450" Width="1000">
     <Grid>
+        <StackPanel Orientation="Vertical"  VerticalAlignment="Top" Margin="10">
+            <Label Content="Sıralanacak Sayılar (aralarına virgül koyarak giriniz. Örneğin (5,7,48,59):" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" />
+            <Button Content="Random Üret" Width="300" Margin="5" Click="Random" HorizontalAlignment="Left"/>
+
+            <TextBox Width="800"  Height="28" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="0" TextAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Name="Elemanlar"/>
+
+            <StackPanel >
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button Content="Bubble Sort" Width="150" Margin="5" Click="Bubble" HorizontalAlignment="Left"/>
+                    <Label Content="Sonuç: " HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" />
+                    <Label Content="" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" Name="BubbleSortSonuc" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button Content="Insertion Sort" Width="150" Margin="5" Click="Insertion" HorizontalAlignment="Left"/>
+                    <Label Content="Sonuç: " HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" />
+                    <Label Content="" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" Name="InsertionSortSonuc" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
 
     </Grid>
 </Window>
