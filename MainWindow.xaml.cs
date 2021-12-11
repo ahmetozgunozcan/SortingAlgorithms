@@ -55,7 +55,7 @@ namespace SortingAlgorithms
         private void Random(object sender, RoutedEventArgs e)
         {
             Random rnd = new Random();
-            int[] dizi = new int[20];
+            int[] dizi = new int[7];
 
             for (int i = 0; i < dizi.Length; i++)
             {
@@ -177,6 +177,45 @@ namespace SortingAlgorithms
             MergeSortSonuc.Content = string.Join(",", sonuc);
         }
 
+
+        private void Selection(object sender, RoutedEventArgs e)
+        {
+            SelectionSortSonuc.Content = "";
+
+            //Stopwatch sw = new Stopwatch();
+            //sw.Start();
+
+            int[]? dizi = null;
+            if (!isValid(out dizi))
+                return;
+
+            if (dizi == null) return;
+
+            int enkucuk;
+            int index;
+
+            //1. elemanından başlıyoruz.
+            for (int i = 0; i <= (dizi.Length - 1); i++)
+            {
+                //son eleman en küçük kabul edilir.
+                enkucuk = dizi[dizi.Length - 1];
+                index = dizi.Length - 1;
+
+                for (int j = i; j < (dizi.Length - 1); j++)//daha küçüğü aranır
+                {
+                    if (dizi[j] < enkucuk)
+                    {
+                        enkucuk = dizi[j];
+                        index = j;
+                    }
+                }
+                dizi[index] = dizi[i];
+                dizi[i] = enkucuk;
+            }
+            //sw.Stop();
+
+            SelectionSortSonuc.Content = string.Join(",", dizi);
+        }
 
     }
 }

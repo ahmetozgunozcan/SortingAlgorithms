@@ -31,6 +31,12 @@
                     <Label Content="Sonuç: " HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" />
                     <Label Content="" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" Name="MergeSortSonuc" />
                 </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button Content="Selection Sort" Width="150" Margin="5" Click="Selection" HorizontalAlignment="Left"/>
+                    <Label Content="Sonuç: " HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" />
+                    <Label Content="" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" FontWeight="Bold" Name="SelectionSortSonuc" />
+                </StackPanel>
             </StackPanel>
         </StackPanel>
 
